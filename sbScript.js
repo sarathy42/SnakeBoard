@@ -130,6 +130,10 @@ function rollDise() {
   let assAni = document.getElementById("diesHolder");
   let randomValue = Math.floor(Math.random() * 6) + 1;
   const dise = document.getElementById("dise");
+  assAni.disabled = true;
+  setTimeout(() => {
+    assAni.disabled = false
+  }, 1500)
   assAni.classList.remove("rollAni");
   void assAni.offsetWidth;
   assAni.classList.add("rollAni");

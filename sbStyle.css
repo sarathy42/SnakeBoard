@@ -11,13 +11,6 @@ body {
     background-size: 34px 34px;
     background-position: 0 0,17px 17px;
 }
-button {
-    background-color: #ef233c;
-    padding: 5px 15px;
-    border: none;
-    border-radius: 15px !important;
-    box-shadow: 1px 1px 5px #525252, -1px -1px 5px #ffffff;
-}
 p {
     margin: 0px;
     font-size: smaller;
@@ -42,6 +35,11 @@ input:focus-visible {
     justify-content: center;
     align-items: center;
     gap: 20px;
+    
+    button {
+        border: none;
+        background-color: transparent;
+    }
 }
 .board {
     height: fit-content;
@@ -66,9 +64,6 @@ input:focus-visible {
     display: flex;
     gap: 20px;
 }
-.refresh{
-    flex-grow: 1;
-}
 .refresh > span {
     height: 70px;
 }
@@ -76,15 +71,9 @@ img {
     height: inherit;
 }
 .displayPlayer {
-    flex-grow: 30;
-}
-.diesHolder{
     flex-grow: 1;
 }
-.diesHolder > span > img{
-    border-radius: 10px;
-}
-.sty {
+.op {
     padding: 10px;
     border-radius: 10px;
     background-color: #ef233c;
@@ -92,7 +81,6 @@ img {
     justify-content: center;
     align-items: center;
 }
-
 .blc {
     width: fit-content;
     display: flex;
@@ -124,6 +112,14 @@ img {
     backdrop-filter: blur(10px);
     height: 100vh;
     width: 100%;
+
+    button {
+        background-color: #ef233c;
+        padding: 5px 15px;
+        border: none;
+        border-radius: 15px !important;
+        box-shadow: 1px 1px 5px #525252, -1px -1px 5px #ffffff;
+    }
 }
 #setPlayerCnt{
     height: fit-content;

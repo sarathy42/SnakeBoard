@@ -240,22 +240,34 @@ img {
 }
 .coin1 {
     background-color: red;
-    border: 1px solid black;
+    border: 3px solid black;
+    animation: coinMove 1s;
 }
 .coin2 {
     background-color: yellow;
-    border: 1px solid black;
+    border: 3px solid black;
+    animation: coinMove 1s;
 }
 .coin3 {
     background-color: green;
-    border: 1px solid black;
+    border: 3px solid black;
+    animation: coinMove 1s;
 }
 .coin4 {
     background-color: blue;
-    border: 1px solid black;
+    border: 3px solid black;
+    animation: coinMove 1s;
 }
 .rollAni {
     animation: roll 0.5s;
+}
+
+@keyframes coinMove {
+    from {
+        scale: 1.2;
+    } to {
+        scale: 1;
+    }
 }
 
 @keyframes roll {

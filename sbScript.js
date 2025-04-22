@@ -168,5 +168,5 @@ function moveCoinByDise(move) {
   }
   temp.classList.remove(`coin${trackPlayer}`);
   temp = document.getElementById(cuPlayer.position);
-  temp.setAttribute("class", `coin coin${trackPlayer}`);
+  temp.classList.add(`coin coin${trackPlayer}`);
 }

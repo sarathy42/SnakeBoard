@@ -1,6 +1,6 @@
 let player;
 let playerCount = 2;
-let trakPlayer = 1;
+let trackPlayer = 1;
 let cuPlayer;
 let reSetGame;
 const snake = {
@@ -26,8 +26,8 @@ function creatBlock() {
   const board = document.getElementById("board");
   board.innerHTML = "";
   reSetGame = 0;
-  cuPlayer = player[`player${trakPlayer}`];
-  document.getElementById("showCurrentPlayer").innerText = `player${trakPlayer}`;
+  cuPlayer = player[`player${trackPlayer}`];
+  document.getElementById("showCurrentPlayer").innerText = `player${trackPlayer}`;
   let numAss = 1;
   for (i = 1; i <= 10; i++) {
     let rowB = document.createElement("div");
@@ -58,7 +58,7 @@ function placePlayer() {
     fisrtBlc.classList.add(`coin${i}`);
   }
   document.getElementById("showCurrentPlayer").innerText =
-    player[`player${trakPlayer}`].name;
+    player[`player${trackPlayer}`].name;
 }
 
 function adjustPlayerCount(adjPly) {
@@ -113,17 +113,17 @@ function assignPlayer() {
 }
 
 function decidePlayer() {
-  if (trakPlayer == playerCount) {
-    trakPlayer = 1;
+  if (trackPlayer == playerCount) {
+    trackPlayer = 1;
   } else {
-    trakPlayer++;
+    trackPlayer++;
   }
-  if (player[`player${trakPlayer}`].position == 100) {
+  if (player[`player${trackPlayer}`].position == 100) {
     decidePlayer();
   }
-  cuPlayer = player[`player${trakPlayer}`];
+  cuPlayer = player[`player${trackPlayer}`];
   document.getElementById("showCurrentPlayer").innerText =
-    player[`player${trakPlayer}`].name;
+    player[`player${trackPlayer}`].name;
 }
 
 function rollDise() {
@@ -151,7 +151,7 @@ function rollDise() {
   if (randomValue < 6) {
     decidePlayer();
   }
-  if (player[`player${trakPlayer}`].type == "bot") {
+  if (player[`player${trackPlayer}`].type == "bot") {
     rollDise();
   }
 }
@@ -166,7 +166,7 @@ function moveCoinByDise(move) {
   } else if (cuPlayer.position in ladder) {
     cuPlayer.position = ladder[cuPlayer.position];
   }
-  temp.classList.remove(`coin${trakPlayer}`);
+  temp.classList.remove(`coin${trackPlayer}`);
   temp = document.getElementById(cuPlayer.position);
-  temp.setAttribute("class", `coin coin${trakPlayer}`);
+  temp.setAttribute("class", `coin coin${trackPlayer}`);
 }
